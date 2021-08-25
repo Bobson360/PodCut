@@ -1,0 +1,72 @@
+<!-- <mat-sidenav-container class="container">
+  <mat-sidenav
+    class="sidenav"
+    mode="side"
+    opened
+    fixedInViewport="true"
+    fixedTopGap="64"
+  >
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/"> <i class="material-icons" routerLink="/">home</i>Início </a>
+      <a mat-list-item routerLink="products"> <i class="material-icons">storefront</i>Produtos </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+<router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="teste()">
+      <mat-icon *ngIf="!sidenav.opened">
+          menu
+      </mat-icon>
+      <mat-icon *ngIf="sidenav.opened">
+          close
+      </mat-icon>
+  </button>
+  Podcasts cuts video makers
+</mat-toolbar>
+
+<!-- <mat-sidenav-container [ngStyle]="{'background-color':'green'}"> -->
+<mat-sidenav-container [ngStyle]="{'width': aberto ? '250px': '0px'}">
+<!-- <mat-sidenav-container [ngStyle]="{'width':'250px'}"> -->
+<!-- <mat-sidenav-container [style.width.px]="{ :aberto ? '250': '0'}"> -->
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+      <img class="avatar mat-elevation-z8" src="https://avatars.githubusercontent.com/u/29025668?v=4" />
+
+      <h4 class="name">John Smith</h4>
+      <p class="designation">Software Engineer</p>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button">
+          <mat-icon>home</mat-icon>
+          <span>Início</span>
+      </button>
+      <button mat-button class="menu-button">
+          <mat-icon>movie</mat-icon>
+          <span>Novo video</span>
+      </button>
+      <button mat-button class="menu-button">
+          <mat-icon>info</mat-icon>
+          <span>Sobre</span>
+      </button>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button">
+          <mat-icon>help</mat-icon>
+          <span>Help</span>
+      </button>
+
+    </mat-sidenav>
+    <!-- <mat-card class="content">
+
+    </mat-card> -->
+  <!-- <mat-sidenav-content>
+      <div class="content mat-elevation-z8">
+      </div>
+  </mat-sidenav-content> -->
+</mat-sidenav-container>
