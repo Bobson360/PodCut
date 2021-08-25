@@ -5,15 +5,15 @@ const path = require("path");
 const app = express();
 
 // Serve os arquivos estáticos da pasta dist (gerada pelo ng build)
-app.use(express.static(__dirname + "/dist/botpodcut"));
+app.use(express.static(__dirname + "/dist/frontend"));
 
 app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/dist/botpodcut/index.html"));
+  res.sendFile(path.join(__dirname + "/dist/frontend/index.html"));
 });
 
-for(i =0; i < 20; i++){
-    console.log('Rodando arquivo server.js')
-}
+// for(i =0; i < 20; i++){
+//     console.log('Rodando arquivo server.js')
+// }
 
 // Inicia a aplicação pela porta configurada
 app.listen(process.env.PORT || 8080);
