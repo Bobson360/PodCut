@@ -11,9 +11,5 @@ app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname + "/dist/frontend/index.html"));
 });
 
-// for(i =0; i < 20; i++){
-//     console.log('Rodando arquivo server.js')
-// }
-
 // Inicia a aplicação pela porta configurada
 app.listen(process.env.PORT || 8080);
